@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>这是module2</h3>
+    <hr>
+    <a href="" th:href="@{logOutURL}">退出登录</a><br>
+
+
+    <form action="" id="form">
+        <input type="text" name="city" value="jinan"><br>
+        <input type="text" name="appkey" value="32aba1f19622e8c8b31c99965e6a8884">
+    </form>
+    <button type="button" id="btn">send</button>
+
+</body>
+
+<!--/*<th:block th:replace="_fragments ::script">*/-->
+<script type="text/javascript" src="/webjars/jquery/3.5.1/dist/jquery.js" th:src="@{/webjars/jquery/3.5.1/dist/jquery.js}"></script>
+<script type="text/javascript" src="/webjars/Semantic-UI/2.4.1/semantic.min.js"th:src="@{/webjars/Semantic-UI/2.4.1/semantic.min.js}"></script>
+<!--/*</th:block>*/-->
+<script>
+    $('#btn').click(function () {
+        var fromData = $('#form').serialize()
+        $.ajax({
+            url:'http://way.jd.com/he/freeweather',
+            type:'GET',
+            data:fromData,
+            dataType:'jspnp',
+        }).done(function(res){
+            if(res.code == '1'){
+                console.log(res);
+            }
+        })
+        // $.ajax({
+        //     type: 'GET',
+        //     url: 'http://way.jd.com/he/freeweather',
+        //     data: fromData,
+        //     dataType:'json',
+        //     crossDomain:true,
+        //     options:function(){
+        //
+        //     },
+        //     success:function (data) {
+        //         console.log(data)
+        //     },
+        //     error:function (data) {
+        //         console.error(data)
+        //     }
+        // })
+    })
+</script>
+</html>

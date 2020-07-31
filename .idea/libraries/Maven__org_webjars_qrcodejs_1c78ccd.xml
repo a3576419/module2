@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.webjars:qrcodejs:1c78ccd">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/qrcodejs/1c78ccd/qrcodejs-1c78ccd.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/qrcodejs/1c78ccd/qrcodejs-1c78ccd-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/qrcodejs/1c78ccd/qrcodejs-1c78ccd-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
